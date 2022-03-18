@@ -27,5 +27,16 @@ module.exports={
         } catch (error) {
             console.log(error);
         }
+    },
+
+    deleteUser:async(req,res) => {
+        try {
+            const {id}  = req.params
+            const user = await userModel.findOneAndRemove({_id:id})
+            // console.log(user);
+            res.redirect('/user')
+        } catch (error) {
+            console.log(error);
+        }
     }
 }

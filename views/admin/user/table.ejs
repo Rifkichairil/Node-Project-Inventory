@@ -26,9 +26,16 @@
                                     <td><%= users[i].name %></td>
                                     <td><%= users[i].email %></td>
                                     <td><%= users[i].status %></td>
+                                    <td>/<%= users[i]._id %></td>
+                                    <td>
+                                        <form action="/user/delete/<%= users[i]._id %>?_method=DELETE"  method="POST">
+                                            <button type="submit" class="btn btn-sm btn-danger btn-rounded btn-icon">
+                                                <i class="ti-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
                                 </tr>
                             <% } %>
-                         
                             </tbody>
                         </table>
                         </div>
