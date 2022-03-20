@@ -1,0 +1,47 @@
+
+        <div class="row">
+            <div class="col-lg-12 col-md-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <p class="card-title">List <%- title %></p>
+                            <a href="/item/create" class="btn btn-outline-info btn-fw">Tambah <%- title %></a>
+                        </div>
+                        <br>
+                        <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Kode</th>
+                                <th>Tipe</th>
+                                <th>Title</th>
+                                <th>Qty</th>
+                                <th>Aksi</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <% for(let i = 0; i < item.length; i++){%>
+                                    <tr>
+                                        <td><%= i + 1%></td>
+                                        <td><%= item[i].kode%></td>
+                                        <td><%= item[i].type%></td>
+                                        <td><%= item[i].title%></td>
+                                        <td><%= item[i].quantity%></td>
+                                        <td>
+                                            <form action="/item/delete/<%= item[i]._id %>?_method=DELETE"  method="POST">
+                                                <button type="submit" class="btn btn-sm btn-danger btn-rounded btn-icon">
+                                                    <i class="ti-trash"></i>
+                                                </button>
+                                            </form>
+                                        </td>
+                                    </tr>    
+                                <%}%>
+                            
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>

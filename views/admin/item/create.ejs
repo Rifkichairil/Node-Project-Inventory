@@ -1,0 +1,57 @@
+<%- include ../../partials/header.ejs %>
+<%- include ../../partials/navbar.ejs %>
+<%- include ../../partials/sidebar.ejs %>
+
+<!-- dari sini -->
+<div class="main-panel">
+    <div class="content-wrapper">
+
+        <div class="col-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                <h4 class="card-title">Tambah Item</h4>
+                                    <form class="forms-sample" action="/item/create" method="post">
+                                        <div class="form-group">
+                                            <label for="kode">Kode</label>
+                                            <input type="text" class="form-control" id="kode" name="kode" placeholder="Kode">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="type">Tipe</label>
+                                            <input type="text" class="form-control" id="type" name="type" placeholder="type">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="title">Title</label>
+                                            <input type="text" class="form-control" id="title" name="title" placeholder="title">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="description">Deskripsi</label>
+                                            <input type="text" class="form-control" id="description" name="description" placeholder="description">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="quantity">Jumlah</label>
+                                            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="quantity">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Table -->
+
+    </div>
+    <!-- content-wrapper ends -->
+
+<!-- main-panel ends in footer -->
+
+    
+<%- include ../../partials/footer.ejs %>
+<%- include ../../partials/js.ejs %>
