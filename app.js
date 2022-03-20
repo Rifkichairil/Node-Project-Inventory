@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var dashboardRouter = require('./app/router/dashboardRouter')
 var userRouter = require('./app/router/userRouter')
 var itemRouter = require('./app/router/itemRouter')
+var bookingRouter = require('./app/router/bookingRouter')
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', dashboardRouter);
 app.use('/item', itemRouter);
 app.use('/user', userRouter);
+app.use('/booking', bookingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
